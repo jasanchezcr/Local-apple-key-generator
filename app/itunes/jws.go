@@ -80,7 +80,6 @@ func (j jws) ExtractJWSPayload(jws string) (string, error) {
 
 	payloadBytes, err := base64.RawURLEncoding.DecodeString(payloadBase64)
 	if err != nil {
-		// Manejo de errores en caso de que la decodificación falle
 		return "", err
 	}
 
