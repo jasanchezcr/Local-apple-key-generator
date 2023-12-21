@@ -1,0 +1,29 @@
+# JWT Management Tool
+
+## Overview
+This tool provides a simple command-line interface for generating JSON Web Tokens (JWT) and decrypting receipts using Apple's iTunes services.
+
+## Features
+- **Generate JWT**: Quickly create JWTs for server-to-server communication.
+- **Decrypt Receipt**: Easily decrypt receipts from Apple's iTunes service.
+
+## Prerequisites
+Before you can use this tool, there are a few things you need to set up:
+
+1. **Private Key (`private_key.pem`)**: You need to have a valid `private_key.pem` file from Apple. Replace the existing file with your the private key shared by lastpass.
+
+2. **Environment Variables**: This tool uses environment variables for configuration. Create a `.env` file in the root directory of the project. You can get it from lastpass.
+
+3. **.env Example**: Refer to the `.env.example` file in the project for the required environment variables. This file contains placeholders for the following variables:
+   - `APPLE_KEY_ID`: Your Apple Key ID.
+   - `APPLE_ISSUER_ID`: Your Apple Issuer ID.
+   - `APPLE_PRIVATE_KEY`: Your Apple Private Key.
+
+## Getting Started
+1. Clone the repository to your local machine.
+2. Replace the `private_key.pem` with your private key file.
+3. Create a `.env` file based on the `.env.example`.
+4. Populate the `.env` file with your Apple credentials and private key.
+5. Run the program using `go run main.go` (or your preferred method for running Go programs).
+
+
